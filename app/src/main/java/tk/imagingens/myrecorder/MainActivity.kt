@@ -8,6 +8,7 @@ import android.media.MediaRecorder
 import android.os.Build
 import android.os.Bundle
 import android.os.Environment
+import android.util.Log
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.app.ActivityCompat
@@ -55,6 +56,7 @@ class MainActivity : AppCompatActivity() {
     }
 
     private fun startRecording() {
+        Toast.makeText(this, "Inside startRecording()", Toast.LENGTH_SHORT).show()
         try {
             mediaRecorder?.prepare()
             mediaRecorder?.start()
